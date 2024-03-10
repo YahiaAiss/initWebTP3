@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a id="back" href="main.html">back to main Page</a>
+    <h1>Product Page</h1>
+
+    <!-- Add Product Window -->
+    <h2>Add Product</h2>
+    <form id="addProductForm">
+        <label for="productId">Product ID:</label>
+        <input type="text" id="productId" required>
+        <label for="productLabel">Label:</label>
+        <input type="text" id="productLabel">
+        <label for="unitPrice">Unit Price:</label>
+        <input type="text" id="unitPrice">
+        <label for="quantityInStock">Quantity in Stock:</label>
+        <input type="text" id="quantityInStock">
+        <button type="submit">Add Product</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <!-- Delete Product Window -->
+    <h2>Delete Product</h2>
+    <form id="deleteProductForm">
+        <label for="deleteProductId">Product ID:</label>
+        <input type="text" id="deleteProductId">
+        <button type="submit">Delete Product</button>
+    </form>
+
+    <!-- Product List Window -->
+    <h2>Product List</h2>
+    <table id="productList">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Label</th>
+                <th>Unit Price</th>
+                <th>Quantity in Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product list will be populated dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="product.js" defer></script>
+</body>
+</html>

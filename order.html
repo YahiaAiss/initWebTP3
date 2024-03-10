@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Order Page</h1>
+
+    <!-- Place Order Window -->
+    <h2>Place Order</h2>
+    <form id="placeOrderForm">
+        <label for="orderId">Order ID:</label>
+        <input type="text" id="orderId" required>
+        <label for="orderDate">Date:</label>
+        <input type="date" id="orderDate">
+        <label for="orderQuantity">Quantity:</label>
+        <input type="number" id="orderQuantity" min="1">
+        <label for="paymentMethod">Payment Method:</label>
+        <input type="checkbox" id="cashPayment" name="paymentMethod" value="cash">
+        <label for="cashPayment">Cash</label>
+        <input type="checkbox" id="transferPayment" name="paymentMethod" value="transfer">
+        <label for="transferPayment">Transfer</label>
+        <label for="bankSelect">Bank:</label>
+        <select id="bankSelect">
+            <option value="BNA">BNA</option>
+            <option value="AlgeriePoste">Algerie Poste</option>
+            <option value="CPA">CPA</option>
+        </select>
+        <button type="submit">Place Order</button>
+    </form>
+
+    <!-- Delete Order Window -->
+    <h2>Delete Order</h2>
+    <form id="deleteOrderForm">
+        <label for="deleteOrderId">Order ID:</label>
+        <input type="text" id="deleteOrderId">
+        <button type="submit">Delete Order</button>
+    </form>
+
+    <!-- Order List Window -->
+    <h2>Order List</h2>
+    <table id="orderList">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Quantity</th>
+                <th>Payment Method</th>
+                <th>Bank</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Order list will be populated dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="order.js" defer></script>
+</body>
+</html>
